@@ -16,17 +16,20 @@
 </div>
 <div>
     <!--Валидация не только в браузере, но и на сервере-->
-    <form name="OptionForm" method="POST" onsubmit="return validate()">
+    <form name="OptionForm" method="POST" action="php/script.php" >
         <fieldset>
             <label for="X">Выберите значение X</label>
             <select id="X" name="X">
                 <option value="-5">-5</option>
+                <option value="-4">-4</option>
+                <option value="-3">-3</option>
+                <option value="-2">-2</option>
                 <option value="2">2</option>
             </select><br>
             <label for="Y">Введите значение Y</label>
             <input id="Y" name="Y"><br>
             <label for="R">Введите значение R</label>
-            <input id="R">
+            <input id="R" name="R">
             <!--<input type="button" value="Submit" onclick="validate()">-->
             <p><input type="submit" value="Send"></p>
         </fieldset>
