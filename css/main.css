@@ -1,10 +1,25 @@
-p{
-    font-family: 'Monospaced', Serif, sans-serif;
+body{
+    background-color: lightgray;
+    font-family: Fantasy, sans-serif;
 }
+
+table, th, td, tr{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+th{
+    color: darkblue;
+}
+
+input{
+    width: 50px;
+}
+
 
 #header{
-    color: rebeccapurple;
-    font-family: 'Century Gothiv', sans-serif;
+    color: darkblue;
 }
 
-input:i
+.title{
+    color: black;
+}

@@ -12,8 +12,11 @@
 <body onload="feelValues()">
 <script src="js/validator.js"></script>
 <header>
-    <p>Бернятцкая Кристина, P32081.<br>Вариант №1104.<br></p>
-    <div id="txt"></div>
+    <div class="title">
+        <p class="title">Бернятцкая Кристина, P32081.<br>Вариант №1104.<br></p>
+        <p id="txt" class="title"></p>
+    </div>
+
 </header>
 <div>
     <h2 id="header">Лабораторная работа №1</h2>
@@ -22,21 +25,21 @@
 <div>
     <form name="OptionForm" method="GET" action="" >
         <fieldset>
-            <label for="X">Выберите значение X</label>
+            <label for="X">Выберите значение X в интервале <b>[-5, 3]</b></label>
             <select id="X" name="X">
                 <option value="-5">-5</option>
                 <option value="-4">-4</option>
                 <option value="-3">-3</option>
                 <option value="-2">-2</option>
-                <option value="-1">-2</option>
-                <option value="0">-2</option>
-                <option value="1">-2</option>
+                <option value="-1">-1</option>
+                <option value="0">-0</option>
+                <option value="1">1</option>
                 <option value="2">2</option>
-                <option value="3">-2</option>
+                <option value="3">3</option>
             </select><br>
-            <label for="Y">Введите значение Y</label>
+            <label for="Y">Введите значение Y в интервале <b>[-3, 5]</b></label>
             <input id="Y" name="Y"><br>
-            <label for="R">Введите значение R</label>
+            <label for="R">Введите значение R в интервале <b>[2, 5]</b></label>
             <input id="R" name="R">
             <p><input type="button" id="submit" value="Send"></p>
         </fieldset>
