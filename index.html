@@ -5,18 +5,22 @@
     <title>Лабораторная работа 1</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"
+        integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
+        crossorigin="anonymous"></script>
+<script src="js/requestSender.js"></script>
 <body onload="feelValues()">
 <script src="js/validator.js"></script>
 <header>
-    <p>Бернятцкая Кристина, P32081.<br>Вариант №1104.</p>
+    <p>Бернятцкая Кристина, P32081.<br>Вариант №1104.<br></p>
+    <div id="txt"></div>
 </header>
 <div>
     <h2 id="header">Лабораторная работа №1</h2>
     <img src="resource/areas.png" alt="График">
 </div>
 <div>
-    <!--Валидация не только в браузере, но и на сервере-->
-    <form name="OptionForm" method="GET" action="php/script.php" >
+    <form name="OptionForm" method="GET" action="" >
         <fieldset>
             <label for="X">Выберите значение X</label>
             <select id="X" name="X">
@@ -24,16 +28,33 @@
                 <option value="-4">-4</option>
                 <option value="-3">-3</option>
                 <option value="-2">-2</option>
+                <option value="-1">-2</option>
+                <option value="0">-2</option>
+                <option value="1">-2</option>
                 <option value="2">2</option>
+                <option value="3">-2</option>
             </select><br>
             <label for="Y">Введите значение Y</label>
             <input id="Y" name="Y"><br>
             <label for="R">Введите значение R</label>
             <input id="R" name="R">
-            <!--<input type="button" value="Submit" onclick="validate()">-->
-            <p><input type="submit" value="Send"></p>
+            <p><input type="button" id="submit" value="Send"></p>
         </fieldset>
     </form>
+    <div id>
+        <p>Таблица результатов</p>
+        <table id="respTable">
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Результат</th>
+                <th>Время работы скрипта</th>
+                <th>Дата и время</th>
+            </tr>
+        </table>
+    </div>
+
 </div>
 </body>
 </html>
