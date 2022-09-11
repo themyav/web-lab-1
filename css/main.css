@@ -1,22 +1,71 @@
-body{
+.container{
     background-color: lightgray;
     font-family: Fantasy, sans-serif;
+    font-size: 16px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    border-radius: 8px;
 }
 
-table, th, td, tr{
+.header{        /* селектор классов */
+    background: lavender;
+}
+label[for]{     /* селектор атрибутов */
+    color: brown;
+}
+
+img{
+    border-radius: 8px;
+}
+
+table, th, td, tr{  /* селектор элемента */
     border-collapse: collapse;
     border: 1px solid black;
 }
+tr{
+    background-color: white;
+}
+tr:hover{
+    background-color: lavender;
+}
+
 th{
     color: darkblue;
+    background-color: lavender;
 }
 
-input{
+input, select{
     width: 50px;
+    border-radius: 8px;
 }
 
+input:focus,select:focus{
+    background-color: lavender;
+}
 
-#header{
+input[type="button"]{
+    background-color: dodgerblue;
+    border-color: darkblue;
+    border-radius: 8px;
+    color: darkblue;
+    font-size: 16px;
+    width: 100px;
+    height: 30px;
+}
+
+input[type="button"]:hover{
+    background-color: lavender;
+}
+
+#OptionForm, #respTable{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+h2, h3{
     color: darkblue;
 }
 

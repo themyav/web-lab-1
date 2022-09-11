@@ -9,55 +9,53 @@
         integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
         crossorigin="anonymous"></script>
 <script src="js/requestSender.js"></script>
-<body onload="feelValues()">
 <script src="js/validator.js"></script>
-<header>
-    <div class="title">
+
+<body onload="feelValues()">
+<div class="container">
+    <div class="header">
         <p class="title">Бернятцкая Кристина, P32081.<br>Вариант №1104.<br></p>
         <p id="txt" class="title"></p>
     </div>
-
-</header>
-<div>
-    <h2 id="header">Лабораторная работа №1</h2>
-    <img src="resource/areas.png" alt="График">
-</div>
-<div>
-    <form name="OptionForm" method="GET" action="" >
-        <fieldset>
-            <label for="X">Выберите значение X в интервале <b>[-5, 3]</b></label>
-            <select id="X" name="X">
-                <option value="-5">-5</option>
-                <option value="-4">-4</option>
-                <option value="-3">-3</option>
-                <option value="-2">-2</option>
-                <option value="-1">-1</option>
-                <option value="0">-0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select><br>
-            <label for="Y">Введите значение Y в интервале <b>[-3, 5]</b></label>
-            <input id="Y" name="Y"><br>
-            <label for="R">Введите значение R в интервале <b>[2, 5]</b></label>
-            <input id="R" name="R">
-            <p><input type="button" id="submit" value="Send"></p>
-        </fieldset>
-    </form>
-    <div id>
-        <p>Таблица результатов</p>
-        <table id="respTable">
-            <tr>
-                <th>X</th>
-                <th>Y</th>
-                <th>R</th>
-                <th>Результат</th>
-                <th>Время работы скрипта</th>
-                <th>Дата и время</th>
-            </tr>
-        </table>
+    <div class="content">
+        <h2 id="header">Лабораторная работа №1</h2>
+        <img src="resource/areas.png" alt="График">
+        <p>Введите значения X, Y и R, чтобы узнать, попадет ли точка в синюю область на графике.</p>
+        <form name="OptionForm" id="OptionForm" method="GET" action="">
+            <fieldset>
+                <label for="X">Выберите значение X в интервале <b>[-5, 3]</b></label>
+                <select id="X" name="X">
+                    <option value="-5">-5</option>
+                    <option value="-4">-4</option>
+                    <option value="-3">-3</option>
+                    <option value="-2">-2</option>
+                    <option value="-1">-1</option>
+                    <option value="0">-0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select><br>
+                <label for="Y">Введите значение Y в интервале <b>[-3, 5]</b></label>
+                <input id="Y" name="Y"><br>
+                <label for="R">Введите значение R в интервале <b>[2, 5]</b></label>
+                <input id="R" name="R">
+                <p><input type="button" id="submit" value="Проверить"></p>
+            </fieldset>
+        </form>
+        <div id="results">
+            <h3>Таблица результатов</h3>
+            <table id="respTable">
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Результат</th>
+                    <th>Время работы скрипта</th>
+                    <th>Дата и время</th>
+                </tr>
+            </table>
+        </div>
     </div>
-
 </div>
 </body>
 </html>
