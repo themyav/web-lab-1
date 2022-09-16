@@ -26,6 +26,9 @@ table, th, td, tr{  /* селектор элемента */
 tr{
     background-color: white;
 }
+tr:nth-child(2) td{
+    background-color: lightyellow;
+}
 tr:hover{
     background-color: lavender;
 }

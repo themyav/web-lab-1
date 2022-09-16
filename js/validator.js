@@ -12,21 +12,32 @@ function startTime() {
 }
 
 function checkTime(i) {
-    if (i < 10) {i = "0" + i;}  // add zero in front of numbers < 10
+    if (i < 10) {
+        i = "0" + i;
+    }
     return i;
 }
 
-function feelArray(arr, min, max){
+function fillTable(){
+    let cookies = document.cookie.split('=');
+    //console.log("welll...");
+    //alert("Hello...");
+    let header = "<tr><th>X</th><th>Y</th><th>R</th><th>Результат</th><th>Время работы скрипта</th><th>Дата и время</th></tr>";
+    document.getElementById("respTable").innerHTML = (header + cookies[1]).trim();
+}
+
+function fillArray(arr, min, max){
     startTime();
     for(let i = min; i <= max; i++){
         arr.push(i.toString());
     }
 }
-function feelValues(){
+function fillValues(){
 
-    feelArray(XValues,-5, 3);
-    feelArray(YValues, -3, 5);
-    feelArray(RValues, 2, 5);
+    fillArray(XValues,-5, 3);
+    fillArray(YValues, -3, 5);
+    fillArray(RValues, 2, 5);
+    fillTable();
 
 }
 

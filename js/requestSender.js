@@ -6,7 +6,11 @@ $(document).ready(function(){
             url:'php/script.php',
             data: {'X' : $('#X').val(), 'Y' : $('#Y').val(), 'R' : $('#R').val()},
             success:function(response){
-                $("#respTable > tbody").append(response);
+                $(response).insertAfter($("#respTable > tbody > tr:first"));
+                //$("#respTable > tbody > tr:first").prepend(response);
+                //alert($("respTable > tbody").html());
+                document.cookie = "table=" + response.toString();
+                console.log("i add " + response.toString());
             }
         });
     });
