@@ -20,10 +20,11 @@ function checkTime(i) {
 
 function fillTable(){
     let cookies = document.cookie.split('=');
-    //console.log("welll...");
-    //alert("Hello...");
-    let header = "<tr><th>X</th><th>Y</th><th>R</th><th>Результат</th><th>Время работы скрипта</th><th>Дата и время</th></tr>";
-    document.getElementById("respTable").innerHTML = (header + cookies[1]).trim();
+    if(cookies.length > 1){
+        let header = "<tr><th>X</th><th>Y</th><th>R</th><th>Результат</th><th>Время работы скрипта</th><th>Дата и время</th></tr>";
+        document.getElementById("respTable").innerHTML = (header + cookies[1]).trim();
+    }
+
 }
 
 function fillArray(arr, min, max){
@@ -51,7 +52,6 @@ function checkValue(value, arr){
 
 function validate(){
     console.log('Hello')
-    //alert("aaa");
     let X = document.forms["OptionForm"]["X"].value;
     let Y = document.forms["OptionForm"]["Y"].value;
     let R = document.forms["OptionForm"]["R"].value;
