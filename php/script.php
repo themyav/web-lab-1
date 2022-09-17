@@ -52,8 +52,8 @@
     }
     else{
         $result = check($x, $y, $r);
-        $scripttime = round(microtime(true) - $start, 5);
-        $currentdate = date(DATE_RFC822);
+        $scripttime = number_format(microtime(true) - $start, 5, '.');
+        $currentdate = date("Y-m-d H:i:s");
         $response = "<tr><td>$x</td><td>$y</td><td>$r</td><td>$result</td><td>$scripttime</td><td>$currentdate</td></tr>";
         echo $response;
     }
