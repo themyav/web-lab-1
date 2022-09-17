@@ -50,6 +50,14 @@ function checkValue(value, arr){
     return ok;
 }
 
+function cleanTable(){
+    let table = document.getElementById("respTable");
+    while(table.rows.length > 1){
+        table.deleteRow(1);
+    }
+    document.cookie = '';
+}
+
 function validate(){
     console.log('Hello')
     let X = document.forms["OptionForm"]["X"].value;
