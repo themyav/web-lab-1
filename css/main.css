@@ -12,7 +12,9 @@
     background: lavender;
 }
 label[for]{     /* селектор атрибутов */
-    color: brown;
+    color: darkblue;
+    text-align: left;
+    margin: 5px;
 }
 
 img{

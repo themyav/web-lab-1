@@ -54,8 +54,8 @@
         $result = check($x, $y, $r);
         $scripttime = number_format(microtime(true) - $start, 5, '.');
         $currentdate = date("Y-m-d H:i:s");
-        $y = number_format($y);
-        $r = number_format($r);
+        $y = floatval($y);
+        $r = floatval($r);
         $response = "<tr><td>$x</td><td>$y</td><td>$r</td><td>$result</td><td>$scripttime</td><td>$currentdate</td></tr>";
         echo $response;
     }

@@ -30,6 +30,7 @@ function fillTable(){
 
 function fillValues(){
     fillTable();
+    startTime();
 
 }
 
