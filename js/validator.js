@@ -22,6 +22,7 @@ function fillTable(){
     let cookies = document.cookie.split('=');
     if(cookies.length > 1){
         let header = "<tr><th>X</th><th>Y</th><th>R</th><th>Результат</th><th>Время работы скрипта</th><th>Дата и время</th></tr>";
+        console.log(document.cookie);
         document.getElementById("respTable").innerHTML = (header + cookies[1]).trim();
     }
 
@@ -55,27 +56,25 @@ function cleanTable(){
     while(table.rows.length > 1){
         table.deleteRow(1);
     }
-    document.cookie = '';
+    document.cookie = "table=;expires=" + new Date(0).toUTCString();
+    console.log(document.cookie);
+}
+
+function colorError(id, ok){
+    if(!ok){
+        document.getElementById(id).style.backgroundColor = "lightpink";
+    }
+    else document.getElementById(id).style.backgroundColor = "white";
 }
 
 function validate(){
-    console.log('Hello')
     let X = document.forms["OptionForm"]["X"].value;
     let Y = document.forms["OptionForm"]["Y"].value;
     let R = document.forms["OptionForm"]["R"].value;
 
-    console.log(X);
-    console.log(Y);
-    console.log(R);
-    console.log(checkValue(X, XValues));
+    colorError("Y", checkValue(Y, YValues));
+    colorError("R", checkValue(R, RValues));
 
-    if(checkValue(X, XValues) && checkValue(Y, YValues) && checkValue(R, RValues)){
-        console.log("Корректные данные");
-        return false;
-    }
-    else{
-        console.log("Некорректные данные");
-        return false;
-    }
+    return checkValue(X, XValues) && checkValue(Y, YValues) && checkValue(R, RValues);
 
 }
