@@ -23,6 +23,7 @@ table, th, td, tr{  /* селектор элемента */
     border-collapse: collapse;
     border: 1px solid black;
 }
+
 tr{
     background-color: white;
 }
@@ -41,6 +42,7 @@ th{
 input, select{
     width: 50px;
     border-radius: 8px;
+    font-weight: bold;
 }
 
 input:focus,select:focus{
@@ -53,15 +55,25 @@ input[type="button"], button{
     border-radius: 8px;
     color: darkblue;
     font-size: 16px;
+    font-weight: bold;
     width: 100px;
     height: 30px;
     margin: 10px;
 }
 
-input[type="button"]:hover, button:hover{
+button{
+    background-color: darkred;
+    border-color: black;
+    color: white;
+}
+
+input[type="button"]:hover{
     background-color: lavender;
 }
 
+button:hover{
+    background-color: indianred;
+}
 
 #OptionForm, #respTable{
     background-color: white;
