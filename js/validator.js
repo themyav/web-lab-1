@@ -17,11 +17,15 @@ function checkTime(i) {
 }
 
 function fillTable(){
+    console.log("hi?");
+    console.log("i got " + document.cookie);
     let cookies = document.cookie.split(';'), i = 0;
     while(i < cookies.length && cookies[i].toString().search('table') === -1) {
         i++;
     }
-    if(cookies.length > 1 && i < cookies.length){
+    console.log(cookies[i]);
+    if(i < cookies.length){
+
         let header = "<tr><th>X</th><th>Y</th><th>R</th><th>Результат</th><th>Время работы скрипта</th><th>Дата и время</th></tr>";
         document.getElementById("respTable").innerHTML = (header + cookies[i].split('=')[1]).trim();
     }

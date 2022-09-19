@@ -14,6 +14,7 @@ $(document).ready(function(){
                         tableCookie += "<tr>" + $("#respTable > tbody > tr:nth-child(" + i + ")").html() + "</tr>";
                     }
                     document.cookie = "table=" + tableCookie.toString();
+                    console.log(document.cookie);
                 }
             });
         }
