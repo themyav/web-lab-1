@@ -21,4 +21,12 @@ $(document).ready(function(){
             alert('Проверьте корректность введенных значений!');
         }
     });
+
+    $('#Y').on('input', function(){
+        this.value = this.value.replace(/[^0-9.\-]/g, '');
+    });
+
+    $('#R').on('input', function(){
+        this.value = this.value.replace(/[^0-9.]/g, '');
+    });
 });

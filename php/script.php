@@ -5,7 +5,7 @@
     //current time
     function validate($x, $y, $r){
         //echo 'Current data'.$x;
-        $number_pattern = '/^[[:blank:]]*-?\d+[[:blank:]]*$/';
+        $number_pattern = '/^[[:blank:]]*-?\d+\.?\d{0,5}[[:blank:]]*$/';
         if(preg_match($number_pattern, $x) and
            preg_match($number_pattern, $y) and
            preg_match($number_pattern, $r)){
@@ -54,6 +54,8 @@
         $result = check($x, $y, $r);
         $scripttime = number_format(microtime(true) - $start, 5, '.');
         $currentdate = date("Y-m-d H:i:s");
+        $y = number_format($y);
+        $r = number_format($r);
         $response = "<tr><td>$x</td><td>$y</td><td>$r</td><td>$result</td><td>$scripttime</td><td>$currentdate</td></tr>";
         echo $response;
     }
