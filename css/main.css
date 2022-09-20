@@ -75,6 +75,11 @@ input[type="button"], button{
 
 }
 
+#errorMessage{
+    font-weight: bold;
+    color: darkred;
+}
+
 button{
     background-color: darkred;
 }

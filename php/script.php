@@ -48,7 +48,7 @@
     $r = $_GET["R"];
 
     if(!validate($x, $y, $r)){
-        echo "<script type='text/javascript'>alert('Введены некорректные данные!');</script>";
+        echo "<script type='text/javascript'>document.getElementById('errorMessage').innerText = 'Проверьте корректность введенных значений!';</script>";
     }
     else{
         $result = check($x, $y, $r);

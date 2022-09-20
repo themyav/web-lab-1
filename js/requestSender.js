@@ -14,12 +14,13 @@ $(document).ready(function(){
                         tableCookie += "<tr>" + $("#respTable > tbody > tr:nth-child(" + i + ")").html() + "</tr>";
                     }
                     document.cookie = "table=" + tableCookie.toString();
-                    console.log(document.cookie);
+                    document.getElementById('errorMessage').innerText = '';
+
                 }
             });
         }
-        else{
-            alert('Проверьте корректность введенных значений!');
+        else {
+            document.getElementById('errorMessage').innerText = 'Проверьте корректность введенных значений!';
         }
     });
 
