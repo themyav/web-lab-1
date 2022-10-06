@@ -17,8 +17,6 @@ function checkTime(i) {
 }
 
 function fillTable(){
-    console.log("hi?");
-    console.log("i got " + document.cookie);
     let cookies = document.cookie.split(';'), i = 0;
     while(i < cookies.length && cookies[i].toString().search('table') === -1) {
         i++;
@@ -45,6 +43,7 @@ function checkValue(value, min, max, positive){
 }
 
 function cleanTable(){
+    restoreCanvas();
     let table = document.getElementById("respTable");
     while(table.rows.length > 1){
         table.deleteRow(1);
@@ -63,7 +62,6 @@ function colorError(id, ok){
 
 
 function validate(){
-    //ограничить длину ввода
     let X = document.forms["OptionForm"]["X"].value;
     let Y = document.forms["OptionForm"]["Y"].value;
     let R = document.forms["OptionForm"]["R"].value;
